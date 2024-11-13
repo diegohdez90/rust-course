@@ -1,3 +1,7 @@
+pub struct Deck {
+    cards: Vec<String>
+}
+
 fn main() {
-    println!("Hello, world!");
+    let deck: Deck = Deck{cards: vec![]};
 }
