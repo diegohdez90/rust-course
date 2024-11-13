@@ -18,5 +18,5 @@ fn main() {
         }
     }
     let deck: Deck = Deck{cards: cards};
-    println!("Deck: {:?}", deck)
+    println!("Deck: {:#?}", deck)
 }
