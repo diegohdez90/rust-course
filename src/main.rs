@@ -30,6 +30,12 @@ impl Deck {
         let mut rng = thread_rng();
         self.cards.shuffle(&mut rng);
     }
+
+    fn deal(&mut self, num_cards: usize) -> Vec<String> {
+        self.cards.split_off(
+            self.cards.len() - num_cards
+        )
+    }
 }
 
 fn main() {
@@ -37,6 +43,8 @@ fn main() {
     println!("Deck: {:#?}", deck);
 
     deck.shuffle();
-    println!("Shuffle Deck: {:#?}", deck);
+    let cards = deck.deal(3);
+    println!("Deal cards: {:#?}", cards);
+    println!("Deck: {:#?}", deck);
 
 }
